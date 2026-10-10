@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP Status Codes — tinytools</title>
+  <meta name="description" content="Search every HTTP status code: plain-English meanings, common mix-ups, former names and links to the RFC. Runs entirely in your browser.">
+  <link rel="canonical" href="https://http-status.tinytools.work/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="tinytools">
+  <meta property="og:title" content="HTTP Status Codes — tinytools">
+  <meta property="og:description" content="Search every HTTP status code: plain-English meanings, common mix-ups and links to the spec.">
+  <meta property="og:url" content="https://http-status.tinytools.work/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="https://tinytools.work/">tinytools<span class="brand-sep">/</span><span class="brand-tool">http-status</span></a>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Theme: system">
+        <span class="theme-label" id="theme-label">system</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>HTTP Status</h1>
+        <p class="lede">Every registered HTTP status code, what it means in plain English, and where it's defined.</p>
+      </section>
+
+      <div class="controls">
+        <label class="search" for="search">
+          <span class="visually-hidden">Search status codes</span>
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+          <input id="search" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Search 404, 4xx, timeout, redirect…">
+          <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        </label>
+
+        <div class="filters">
+          <div class="segmented" id="class-filters" role="group" aria-label="Filter by class"></div>
+          <label class="switch">
+            <input type="checkbox" id="unofficial-toggle">
+            <span class="switch-box" aria-hidden="true"></span>
+            <span>Unofficial codes</span>
+          </label>
+        </div>
+      </div>
+
+      <p class="result-meta" id="result-meta" aria-live="polite"></p>
+      <div id="results" class="results"></div>
+    </main>
+
+    <footer class="footer">
+      <p>Runs entirely in your browser. No tracking, no sign-up.</p>
+      <p>Sources: <a href="https://www.iana.org/assignments/http-status-codes/" rel="noopener noreferrer" target="_blank">IANA status code registry</a> · <a href="https://www.rfc-editor.org/rfc/rfc9110.html#section-15" rel="noopener noreferrer" target="_blank">RFC 9110 §15</a></p>
+      <p class="footer-keys"><kbd>/</kbd> search · <kbd>Esc</kbd> clear · click a code to copy it</p>
+    </footer>
+  </div>
+</body>
+</html>

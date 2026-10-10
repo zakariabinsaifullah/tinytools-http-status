@@ -1,0 +1,14 @@
+{
+  "name": "tinytools-http-status",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "preview": "python3 -m http.server 8787 --directory public",
+    "check": "node scripts/check-data.js",
+    "deploy": "npm run check && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.149.0"
+  }
+}

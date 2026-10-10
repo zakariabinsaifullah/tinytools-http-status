@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tinytools-http-status",
+  "compatibility_date": "2026-10-01",
+  // Static site only: no Worker script, Cloudflare serves ./public directly.
+  "assets": {
+    "directory": "./public"
+  },
+  // Attaches the subdomain on deploy. Requires tinytools.work to be a zone in the same Cloudflare account.
+  "routes": [
+    { "pattern": "http-status.tinytools.work", "custom_domain": true }
+  ],
+  "workers_dev": false
+}
